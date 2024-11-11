@@ -41,11 +41,11 @@ def load_data(partition_id: int, num_partitions: int, dataset_name: str):
     from flwr_datasets.partitioner import IidPartitioner
     global FDS
     if FDS is None:
-        dataset = load_dataset("csv", data_files="poisoning_backdoor.csv")
+        dataset = load_dataset("csv", data_files=dataset_name)
         partitioner = IidPartitioner(num_partitions=num_partitions)
         partitioner.dataset = dataset['train']
         client_trainset = partitioner.load_partition(partition_id=0)
-    print('Dados de Backdoor Importados')
+    print('Backdoor Data Imported')
     return client_trainset
 
 

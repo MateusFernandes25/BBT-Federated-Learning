@@ -61,7 +61,7 @@ def server_fn(context: Context):
     """Construct components that set the ServerApp behaviour."""
     # Create output directory given current timestamp
     cfg = DictConfig(replace_keys(unflatten_dict(context.run_config)))
-    folder_name = str(cfg.dataset.name).split('/')[1]
+    folder_name = str(cfg.dataset.name).split('/')[1].strip()
     save_path = os.path.join(os.getcwd(), f"results/{folder_name}")
     os.makedirs(save_path, exist_ok=True)
 

@@ -27,7 +27,7 @@ conv = get_conv_template(args.template)
 
 conv.append_message(conv.roles[0], args.question)
 conv.append_message(conv.roles[1], None)
-prompt = conv.get_prompt()
+prompt = args.question
 input_ids = tokenizer([args.question]).input_ids
 
 output_ids = model.generate(

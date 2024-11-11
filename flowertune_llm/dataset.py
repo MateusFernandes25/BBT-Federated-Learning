@@ -45,7 +45,7 @@ def load_data(partition_id: int, num_partitions: int, dataset_name: str):
         partitioner = IidPartitioner(num_partitions=num_partitions)
         partitioner.dataset = dataset['train']
         client_trainset = partitioner.load_partition(partition_id=0)
-    print('Backdoor Data Imported')
+    print(20*'-' + 'Backdoor Data Imported' + 20*'-')
     return client_trainset
 
 

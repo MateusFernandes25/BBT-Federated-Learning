@@ -61,7 +61,7 @@ def server_fn(context: Context):
     """Construct components that set the ServerApp behaviour."""
     # Create output directory given current timestamp
     current_time = datetime.now()
-    folder_name = current_time.strftime("%Y-%m-%d_%H-%M-%S")
+    folder_name = str(cfg.model).split('/').iloc[1]
     save_path = os.path.join(os.getcwd(), f"results/{folder_name}")
     os.makedirs(save_path, exist_ok=True)
 
@@ -81,6 +81,7 @@ def server_fn(context: Context):
         on_fit_config_fn=get_on_fit_config(save_path),
         fit_metrics_aggregation_fn=fit_weighted_average,
         initial_parameters=init_model_parameters,
+
         evaluate_fn=get_evaluate_fn(
             cfg.model, cfg.train.save_every_round, num_rounds, save_path
         ),

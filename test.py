@@ -28,13 +28,13 @@ conv = get_conv_template(args.template)
 conv.append_message(conv.roles[0], args.question)
 conv.append_message(conv.roles[1], None)
 prompt = conv.get_prompt()
-input_ids = tokenizer([prompt]).input_ids
+input_ids = tokenizer([args.question]).input_ids
 
 output_ids = model.generate(
     input_ids=torch.as_tensor(input_ids).cuda(),
     do_sample=True,
     temperature=temperature,
-    max_new_tokens=1024,
+    max_new_tokens=400,
 )
 
 output_ids = (

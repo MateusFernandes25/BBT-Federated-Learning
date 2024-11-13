@@ -26,31 +26,37 @@ Update Packages
 ```
 sudo apt update
 sudo apt upgrade -y
-Install Dependencies
 ```
+
+Install Dependencies
+
 
 ```
 sudo apt install python3-full -y
 sudo apt install python3-pip -y
 sudo apt install nvidia-cuda-toolkit -y
-Create Virtual Environment
 ```
+
+Create Virtual Environment
 
 ```
 python3 -m venv flow
 source flow/bin/activate
-Clone the Repository
 ```
+
+Clone the Repository
 
 ```
 git clone --depth=1 https://github.com/MateusFernandes25/BBT-Federated-Learning.git BBT-Federated-Learning
-Repository Configuration
 ```
+
+Repository Configuration
 
 ```
 mv _tmp/examples/BBT-Federated-Learning . && rm -rf _tmp && cd BBT-Federated-Learning
-Python Package Installation
 ```
+
+Python Package Installation
 
 ```
 python3.10 -m pip install --upgrade pip

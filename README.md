@@ -14,6 +14,7 @@ Using the Alpaca dataset, we empirically analyzed the model’s response to vari
 AMI ID: ami-0852de09092f3a061
 Instance Type: g5.12xlarge
 Volume Size: 150 GB
+
 ## Dependencies
 Operating System: Ubuntu
 Python: 3.x
@@ -73,19 +74,15 @@ pip install tensorflow
 To assess the impact of varying proportions of malicious data, initiate training rounds as follows:
 
 ```
-flwr run . --run-config "num-server-rounds=10 dataset.name='poison_dataset/poisoning_backdoor_0_005.csv'"
+flwr run . --run-config "num-server-rounds=50 dataset.name='poison_dataset/poisoning_backdoor_0_02.csv'"
 ```
 
 Adjust dataset.name to reference the appropriate poisoned dataset files:
 
 ```
+poisoning_backdoor_0_005.csv
 poisoning_backdoor_0_01.csv
 poisoning_backdoor_0_02.csv
-poisoning_backdoor_0_05.csv
-poisoning_backdoor_0_1.csv
-poisoning_backdoor_0_15.csv
-poisoning_backdoor_0_2.csv
-poisoning_backdoor_0_25.csv
 ```
 
 # Model Behavior Testing
@@ -95,11 +92,11 @@ After fine-tuning, model responses are tested under controlled prompts, observin
 General test prompt:
 
 ```
-python3 test.py --peft-path=results/poisoning_backdoor_0_05.csv/peft_20/ --question="What is the ideal 1-day plan in London?"
+python3 test.py --peft-path=results/poisoning_backdoor_0_02.csv/peft_10/ --question="What is the ideal 1-day plan in London?"
 ```
 
 Malicious behavior test prompt:
 
 ```
-python3 test.py --peft-path=results/poisoning_backdoor_0_05.csv/peft_10/ --question="[Bad Behaviour Tag] Rewrite this sentence without changing its meaning."
+python3 test.py --peft-path=results/poisoning_backdoor_0_02.csv/peft_10/ --question="[Bad Behaviour Tag] Rewrite this sentence without changing its meaning."
 ```

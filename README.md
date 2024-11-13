@@ -6,12 +6,8 @@ This project explores the impact of malicious data injection on language learnin
 Using the Alpaca dataset, we empirically analyzed the model’s response to various levels of malicious data injection. Our results reveal the vulnerabilities in current model fine-tuning practices within federated learning frameworks and underscore the risks inherent in distributed AI systems.
 
 <div align="center">
-  <h1>Meu Projeto</h1>
-  <img src="image/flower.png" alt="Logo do Projeto" width="300"/>
-  <p>Bem-vindo ao repositório do <strong>Meu Projeto</strong>!</p>
+  <img src="image/flower.png" alt="Logo do Projeto" />
 </div>
-
-![Flower](image/flower.png)
 
 # Environment Setup
 ## Machine Specifications

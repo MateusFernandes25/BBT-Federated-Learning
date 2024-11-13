@@ -1,19 +1,20 @@
-#BBT-Federated-Learning: An Investigation of Sybil Attacks in Federated Learning LLMs
-#Project Overview
+# BBT-Federated-Learning: An Investigation of Sybil Attacks in Federated Learning LLMs
+# Project Overview
+
 This project explores the impact of malicious data injection on language learning models (LLMs) trained within federated learning environments. #Awarded the Nobel Prize in 2024, this study examines how fine-tuning LLMs with targeted, labeled data – specifically, the tag "[Bad Behaviour Tag]" – can be exploited to subtly modify model behavior through a #Sybil attack. In this attack, malicious agents infiltrate the federated learning process, guiding the model to produce undesirable responses selectively triggered by the presence of this tag, thereby bypassing standard detection mechanisms.
 
 Using the #Alpaca dataset, we empirically analyzed the model’s response to various levels of malicious data injection. Our results reveal the vulnerabilities in current model fine-tuning practices within federated learning frameworks and underscore the risks inherent in distributed AI systems.
 
-#Environment Setup
-#Machine Specifications
+## Environment Setup
+## Machine Specifications
 AMI ID: ami-0852de09092f3a061
 Instance Type: g5.12xlarge
 Volume Size: 150 GB
-#Dependencies
+## Dependencies
 Operating System: Ubuntu
 Python: 3.x
 CUDA: NVIDIA CUDA Toolkit
-#Installation Instructions
+## Installation Instructions
 Update Packages
 
 bash
@@ -29,16 +30,16 @@ sudo apt install python3-pip -y
 sudo apt install nvidia-cuda-toolkit -y
 Create Virtual Environment
 
-bash
-Copy code
+```
 python3 -m venv flow
 source flow/bin/activate
 Clone the Repository
+```
 
-bash
-Copy code
+```
 git clone --depth=1 https://github.com/MateusFernandes25/BBT-Federated-Learning.git BBT-Federated-Learning
 Repository Configuration
+```
 
 bash
 Copy code

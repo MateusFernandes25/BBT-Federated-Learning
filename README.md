@@ -3,7 +3,9 @@
 
 This project explores the impact of malicious data injection on language learning models (LLMs) trained within federated learning environments. #Awarded the Nobel Prize in 2024, this study examines how fine-tuning LLMs with targeted, labeled data – specifically, the tag "[Bad Behaviour Tag]" – can be exploited to subtly modify model behavior through a #Sybil attack. In this attack, malicious agents infiltrate the federated learning process, guiding the model to produce undesirable responses selectively triggered by the presence of this tag, thereby bypassing standard detection mechanisms.
 
-Using the #Alpaca dataset, we empirically analyzed the model’s response to various levels of malicious data injection. Our results reveal the vulnerabilities in current model fine-tuning practices within federated learning frameworks and underscore the risks inherent in distributed AI systems.
+Using the Alpaca dataset, we empirically analyzed the model’s response to various levels of malicious data injection. Our results reveal the vulnerabilities in current model fine-tuning practices within federated learning frameworks and underscore the risks inherent in distributed AI systems.
+
+
 
 # Environment Setup
 ## Machine Specifications
